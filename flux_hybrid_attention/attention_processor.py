@@ -133,7 +133,7 @@ class HybridNAGPAGFluxAttnProcessor2_0:
                 query_negative,
                 key_negative,
                 value_negative,
-                self.nag_scale,
+                self.nag_scale - 1,
                 self.hybrid_alpha,
             )
             hidden_states_negative = hidden_states_negative.transpose(1, 2).reshape(
